@@ -1,0 +1,55 @@
+{
+  "name": "@denis_bruns/nestjs-route-handler-builder",
+  "version": "0.3.0",
+  "main": "./dist/index.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.js",
+      "types": "./dist/types/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "dist/types"
+  ],
+  "scripts": {
+    "build": "tsc && npm run postbuild",
+    "postbuild": "cp package.json README.md dist/",
+    "lint": "eslint src/lib --ext .ts",
+    "clean": "rimraf dist",
+    "prepublishOnly": "npm cache clean && npm run build",
+    "release": "bash release.sh patch",
+    "release:prerelease": "bash release.sh prerelease",
+    "release:minor": "bash release.sh minor",
+    "release:major": "bash release.sh major",
+    "release:patch": "bash release.sh patch",
+    "release:prepatch": "bash release.sh prepatch",
+    "release:premminor": "bash release.sh preminor",
+    "release:premajor": "bash release.sh premajor",
+    "jest": "jest",
+    "test": "jest src/tests --detectOpenHandles --forceExit"
+  },
+  "keywords": [
+    "clean-architecture",
+    "typescript",
+    "gateway"
+  ],
+  "author": "denis_bruns@protonmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "@denis_bruns/data-reflector": "^0.5.0",
+    "@denis_bruns/foundation": "^0.8.0",
+    "ajv": "^8.17.1",
+    "ajv-errors": "^3.0.0",
+    "ajv-formats": "^3.0.1",
+    "rxjs": "^7.8.1",
+    "uuid": "^11.0.5"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.6",
+    "typescript": "^5.7.2"
+  }
+}
