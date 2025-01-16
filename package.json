@@ -1,6 +1,6 @@
 {
   "name": "@denis_bruns/nestjs-route-handler-builder",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "main": "./dist/index.js",
   "types": "./dist/types/index.d.ts",
   "exports": {
@@ -39,7 +39,7 @@
   "author": "denis_bruns@protonmail.com",
   "license": "MIT",
   "dependencies": {
-    "@denis_bruns/data-reflector": "^1.0.0",
+    "@denis_bruns/data-reflector": "^2.0.0",
     "@denis_bruns/web-core-ts": "^1.0.0",
     "ajv": "^8.17.1",
     "ajv-errors": "^3.0.0",
@@ -48,7 +48,7 @@
     "uuid": "^11.0.5"
   },
   "devDependencies": {
-    "@denis_bruns/http-client-axios": "^0.5.0",
+    "@denis_bruns/http-client-axios": "^2.0.0",
     "@types/aws-lambda": "^8.10.147",
     "@types/axios": "^0.9.36",
     "@types/express": "^5.0.0",
